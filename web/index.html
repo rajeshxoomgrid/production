@@ -17,74 +17,114 @@
 </head>
 
 <body>
-  <div class="container">
-    <img src="static/images/splash_icon.png.png" alt="" class="snt" />
 
-    
+  <div class="container">
+
+    <!-- Logo -->
+    <img
+      src="/static/images/splash_icon.png.png"
+      alt="Abhijeet Logo"
+      class="snt"
+    />
 
     <div class="content">
+
       <h3 class="logo">Molding OEE</h3>
+
       <p>Website is Under Construction</p>
 
       <h1>We're <span>Launching</span> Soon..</h1>
 
+      <!-- Countdown -->
       <div class="launch-time">
+
         <div>
           <p id="days">00</p>
           <span>Days</span>
         </div>
+
         <div>
           <p id="hours">00</p>
           <span>Hours</span>
         </div>
+
         <div>
           <p id="minutes">00</p>
           <span>Minutes</span>
         </div>
+
         <div>
           <p id="seconds">00</p>
           <span>Seconds</span>
         </div>
+
       </div>
+
     </div>
 
-<<<<<<< HEAD
-    <script>
-      var countDownDate = new Date("May 20, 2026 18:00:00").getTime();
-=======
-    <img src="/static/images/rocket.png" class="rocket" />
-  </div>
->>>>>>> 9864df3a43def05b9107c3488dce1bc05388cce7
+    <!-- Rocket Image -->
+    <img
+      src="/static/images/rocket.png"
+      alt="Rocket"
+      class="rocket"
+    />
 
+  </div>
+
+
+  <!-- JavaScript -->
   <script>
-    // var countDownDate = new Date("may 20, 2026 18:00:00").getTime();
-    var countDownDate = new Date("May 20, 2026 18:00:00").getTime();
+
+    // Set your future launch date here
+    var countDownDate = new Date("oct 3, 2026 18:00:00").getTime();
 
     var x = setInterval(function () {
+
       var now = new Date().getTime();
+
       var distance = countDownDate - now;
 
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      var days = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
       );
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      document.getElementById("days").innerHTML = days;
-      document.getElementById("hours").innerHTML = hours;
-      document.getElementById("minutes").innerHTML = minutes;
-      document.getElementById("seconds").innerHTML = seconds;
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+      );
+
+      var minutes = Math.floor(
+        (distance % (1000 * 60 * 60))
+        / (1000 * 60)
+      );
+
+      var seconds = Math.floor(
+        (distance % (1000 * 60))
+        / 1000
+      );
 
       if (distance < 0) {
+
         clearInterval(x);
+
         document.getElementById("days").innerHTML = "00";
         document.getElementById("hours").innerHTML = "00";
         document.getElementById("minutes").innerHTML = "00";
         document.getElementById("seconds").innerHTML = "00";
+
+      } else {
+
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
       }
+
     }, 1000);
+
   </script>
+
 </body>
 
 </html>
